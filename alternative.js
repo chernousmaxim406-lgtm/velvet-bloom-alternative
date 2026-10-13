@@ -1,0 +1,3 @@
+const navigation=document.querySelector('body > nav');
+if(navigation){const toggle=document.createElement('button');toggle.className='menu-toggle';toggle.type='button';toggle.textContent='Меню ☰';toggle.setAttribute('aria-expanded','false');navigation.insertBefore(toggle,navigation.children[1]);toggle.addEventListener('click',()=>{const open=navigation.classList.toggle('is-open');toggle.setAttribute('aria-expanded',String(open));toggle.textContent=open?'Закрыть ×':'Меню ☰'});}
+document.querySelectorAll('.bouquet-grid figure').forEach((figure,i)=>{const link=document.createElement('a');link.href='order.html?bouquet='+i;link.className='catalog-select';link.textContent='Выбрать этот букет →';figure.append(link)});
